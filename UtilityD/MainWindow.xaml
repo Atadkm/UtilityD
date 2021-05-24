@@ -12,8 +12,6 @@
                 <DropShadowEffect/>
             </Border.Effect>
             <Grid Height="300" VerticalAlignment="Top">
-
-                <!-- Top Box -->
                 <Border Background="#FF1E1E1E" CornerRadius="4, 4, 0, 0" Margin="0,0,0,270">
                     <Grid x:Name="TopBox1" Background="Transparent">
                         <Image RenderOptions.BitmapScalingMode="HighQuality" Source="Images/Utility Logo.png" Margin="2,2,403,1" />
@@ -21,14 +19,8 @@
                         <Button x:Name="CloseButton1" FontFamily="Segoe MDL2 Assets" Content="&#xE894;" Style="{StaticResource UniversalButtons}" Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Foreground="White" Height="29" Click="CloseButton_Click" Margin="400,0,0,0"/>
                     </Grid>
                 </Border>
-
-                <!-- Seperator -->
                 <Separator Background="White" Margin="0,26,0,284"/>
-
-                <!-- Text Box -->
                 <TextBox x:Name="InputBox1" Text="Token Here" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="380" Background="#FF1E1E1E" BorderBrush="{x:Null}" Foreground="White" SelectionBrush="{x:Null}" Margin="10,41,0,0" FontSize="10"/>
-
-                <!-- Rich Text Box -->
                 <avalonedit:TextEditor IsReadOnly="True" x:Name="TextEditor1" Background="#FF1E1E1E" BorderBrush="Transparent" Foreground="White" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" HorizontalAlignment="Left" Margin="10,71,0,0" VerticalAlignment="Top" Height="219" Width="410">
                     <avalonedit:TextEditor.Resources>
                         <Style TargetType="{x:Type Border}">
@@ -36,59 +28,28 @@
                         </Style>
                     </avalonedit:TextEditor.Resources>
                 </avalonedit:TextEditor>
-
-                <!-- Buttons -->
-                <Button Margin="390,41,10,234" Style="{StaticResource UniversalButtons}" Click="Button_Click" Background="#FF1E1E1E" BorderBrush="Transparent" Foreground="White" >
+                <Button x:Name="SetTokenButton" Margin="390,41,10,234" Style="{StaticResource UniversalButtons}" Click="SetTokenButton_Click" Background="#FF1E1E1E" BorderBrush="Transparent" Foreground="White" >
                     <Button.ToolTip>
                         <ToolTip Background="#181818" BorderThickness="0" Foreground="White" FontFamily="Segou UI" Content="Set Token" Style="{StaticResource ToolTip}"/>
                     </Button.ToolTip>
                     <Image Source="Images/Set Token Icon.png" Width="20" />
                 </Button>
-
             </Grid>
         </Border>
-
-        <!-- Settings Border -->
-        <Border x:Name="SettingsBorder" Margin="445,10,10,170" Background="#FF323232" BorderBrush="Transparent" CornerRadius="4" >
+        <Border x:Name="SettingsBorder" Margin="445,10,10,10" Background="#FF323232" BorderBrush="Transparent" CornerRadius="4" >
             <Border.Effect>
                 <DropShadowEffect/>
             </Border.Effect>
             <Grid>
-
-                <!-- Top Box -->
-                <Border Background="#FF1E1E1E" CornerRadius="4, 4, 0, 0" Margin="0,0,0,110">
-                    <Grid x:Name="SettingsTopBox" Background="Transparent">
-
-                        <!-- Buttons/Images -->
-                    </Grid>
+                <Border Background="#FF1E1E1E" CornerRadius="4, 4, 0, 0" Margin="0,0,0,270">
+                    <Label Content="Settings" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="30" Foreground="White" FontSize="14"/>
                 </Border>
-
-                <!-- Check Boxes -->
-                <CheckBox x:Name="TopMostCheck" Checked="TopMostCheck_Checked" Unchecked="TopMostCheck_Unchecked" Foreground="White" Style="{StaticResource UniversalCheckBox}" Margin="10,35,10,85" Content="Top Most" />
-
-                <!-- Text Box -->
-                <TextBox x:Name="SetPrefixBox" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="24" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Background="#FF1E1E1E" BorderBrush="{x:Null}" Foreground="White" SelectionBrush="{x:Null}" Margin="10,91,0,0" Text="Prefix Here"/>
-                <Button x:Name="SetPrefixButton" Click="SetPrefixButton_Click" Style="{StaticResource UniversalButtons}" Content="Set Prefix" Background="#FF1E1E1E" Foreground="White" BorderBrush="Transparent" Margin="10,115,10,6" FontSize="10" />
-
+                <CheckBox x:Name="TopMostCheck" Checked="TopMostCheck_Checked" Unchecked="TopMostCheck_Unchecked" Foreground="White" Style="{StaticResource UniversalCheckBox}" Margin="10,35,10,250" Content="Top Most" />
+                <TextBox x:Name="SetPrefixBox" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="24" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Background="#FF1E1E1E" BorderBrush="{x:Null}" Foreground="White" SelectionBrush="{x:Null}" Margin="10,55,0,0" Text="Prefix Here"/>
+                <Button x:Name="SetPrefixButton" Click="SetPrefixButton_Click" Style="{StaticResource UniversalButtons}" Content="Set Prefix" Background="#FF1E1E1E" Foreground="White" BorderBrush="Transparent" Margin="10,79,10,197" FontSize="12" Height="24" />
+                <Button x:Name="NihonButton" Click="NihonButton_Click" Style="{StaticResource UniversalButtons}" Content="Nihon Discord" Background="#FF1E1E1E" Foreground="White" BorderBrush="Transparent" Margin="10,271,10,5" FontSize="12" Height="24" />
+                <Button x:Name="UtilityButton" Click="UtilityButton_Click" Style="{StaticResource UniversalButtons}" Content="Utility Discord" Background="#FF1E1E1E" Foreground="White" BorderBrush="Transparent" Margin="10,247,10,29" FontSize="12" Height="24" />
             </Grid>
         </Border>
-
-        <!--List Box-->
-        <Border x:Name="ScriptListBorder" Background="#FF323232" CornerRadius="4" BorderBrush="Transparent" Margin="445,155,10,10">
-            <Border.Effect>
-                <DropShadowEffect/>
-            </Border.Effect>
-            <Border Background="#FF1E1E1E" CornerRadius="4, 4, 0, 0" Margin="0,0,0,125"/>
-        </Border>
-        <ListBox x:Name="ListBox1" HorizontalAlignment="Left" Height="107" Margin="454,194,0,0" VerticalAlignment="Top" Width="102" BorderBrush="{x:Null}" Background="#FF1E1E1E" Foreground="White">
-            <ListBox.ContextMenu>
-                <ContextMenu Foreground="White" Background="#FF1E1E1E" BorderBrush="#FF1E1E1E">
-                    <MenuItem x:Name="ExecuteFile" Header="Execute File" Click="ExecuteFile_Click">
-                    </MenuItem>
-                    <MenuItem x:Name="RefreshBox" Header="Refresh" Click="RefreshBox_Click">
-                    </MenuItem>
-                </ContextMenu>
-            </ListBox.ContextMenu>
-        </ListBox>
     </Grid>
 </Window>
